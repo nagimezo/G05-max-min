@@ -14,6 +14,8 @@ module g05_max_min_tb;
 
     // Khoi tao va reset mach
     initial begin
+    $dumpfile("g05_max_min.vcd");
+    $dumpvars(0, g05_max_min_tb);
         clk = 1'b0;
         rst_n = 1'b0;
         sample_in = 8'd0;
