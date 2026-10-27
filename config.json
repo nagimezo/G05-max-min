@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "version": 1
+  },
+  "name": "g05_max_min",
+  "design": {
+    "top_module": "g05_max_min",
+    "sources": [
+      "rtl/g05_max_min.sv"
+    ]
+  },
+  "flow": {
+    "platform": "sky130A"
+  }
+}
