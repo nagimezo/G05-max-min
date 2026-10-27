@@ -9,7 +9,7 @@ env:
   # ---- SUA BA DONG NAY CHO KHOP DE CUA MINH -----------------------
   MA_DE: G05
   DESIGN_NAME: g05_max_min
-  CONFIG: config.json
+  CONFIG: config.yaml
   # -----------------------------------------------------------------
 
 jobs:
