@@ -1,4 +1,5 @@
 DESIGN_NAME: g05_max_min
 VERILOG_FILES:
   - dir::rtl/g05_max_min.sv
+CLOCK_PORT: clk
 CLOCK_PERIOD: 20
