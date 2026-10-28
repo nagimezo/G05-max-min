@@ -103,6 +103,33 @@ sample_valid = 1'b1;
 sample_valid = 1'b0;
 
 check_result(8'd80, 8'd10);
+
+// Test 7: Reset giua qua trinh nhan mau
+send_sample(8'd100);
+send_sample(8'd20);
+send_sample(8'd30);
+
+// Reset khi moi nhan 3 mau
+@(negedge clk);
+rst_n = 1'b0;
+sample_valid = 1'b0;
+sample_in = 8'd0;
+
+repeat (2) @(negedge clk);
+rst_n = 1'b1;
+
+// Bat dau mot chuoi 8 mau moi sau reset
+send_sample(8'd7);
+send_sample(8'd9);
+send_sample(8'd3);
+send_sample(8'd12);
+send_sample(8'd5);
+send_sample(8'd8);
+send_sample(8'd4);
+send_sample(8'd6);
+
+check_result(8'd12, 8'd3);
+
 $finish;
     end
 
